@@ -48,11 +48,15 @@ $(document).ready(function(){
         setTimeout(function(){ $("#about").animate({'opacity': 'show', 'marginTop': -20}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
+        setTimeout(function(){ $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750); }, 400);
         document.title = 'About me';
         $('#me').stop(true, true);
         $("#me").css('opacity', '0');
         $("#me").css('margin-left', '-2vw');
         $("#me").css('margin-right', '6vw');
+        $("#about section:nth-of-type(2)").stop(true, true);
+        $("#about section:nth-of-type(2)").hide();
+        $("#about section:nth-of-type(2)").css("top", "150px")
         setTimeout(function(){ 
             $("#index").css("margin-top", "25px");
             $("#about").css("margin-top", "25px");
@@ -126,8 +130,9 @@ $(document).ready(function(){
 });
 
 $(document).scroll(function() {
-    if($(document).scrollTop() > 20){
-        $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750);
+    if($(document).scrollTop() > 120){
+        console.log($(document).scrollTop());
+        $("#about section:nth-of-type(2)").animate({'opacity': 'show', 'top': 50}, 1000);
     }
 });
 

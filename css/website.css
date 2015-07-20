@@ -39,7 +39,6 @@ section {
   height: 200px;
   text-align: center;
   padding: 2vw;
-  font-size: 4vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,13 +47,14 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-section:nth-of-type(odd) {
   text-transform: uppercase;
   color: #fff;
   font-size: 8vw;
   text-shadow: 0 0 5px rgba(0,0,0,0.4);
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
 }
 
 section:first-of-type {
@@ -64,12 +64,19 @@ section:first-of-type {
   text-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
 
-section:nth-of-type(1) {
+#about section:nth-of-type(1) {
   background-image: url(../assets/about.jpg);
 }
 
-section:nth-of-type(3) {
-  background-image: url(../assets/welcome.jpg);
+#about section:nth-of-type(2) {
+  clear: left;
+  position: relative;
+  top: 100px;
+  background-image: url(../assets/background.jpg);
+}
+
+#projects section:nth-of-type(1) {
+  background-image: url(../assets/motherboard.jpg);
 }
 
 .welcome{
@@ -84,8 +91,26 @@ section:nth-of-type(3) {
   text-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
 
+.welcome h1{
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
 span{
   line-height: 40vw;
+}
+
+#about h2{
+  font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+  padding-left: 2vw;
+}
+
+#about h3{
+  font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+  color: #003366;
+  padding-top: 1vw;
 }
 
 .welcome-text{
