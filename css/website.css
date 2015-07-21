@@ -37,12 +37,8 @@ hr{
 section {
   box-sizing: border-box;
   height: 200px;
-  text-align: center;
   padding: 2vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   flex-direction: column;
   background-size: cover;
   background-repeat: no-repeat;
@@ -55,6 +51,12 @@ section {
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
+}
+
+section h1{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 section:first-of-type {
@@ -143,9 +145,6 @@ span{
 .col-xs-4{
   margin-top: 50px;
   margin-right: 0px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: #EEEEEE;
   text-align: center;
 }
 
