@@ -16,7 +16,8 @@ a > img{
 }
 
 hr{
-  height:5px; 
+  height: 5px;
+  height: .5vmax; 
   border:none; 
   color:#FFFFFF; 
   background-color:#FFFFFF;
@@ -36,7 +37,7 @@ hr{
 
 section {
   box-sizing: border-box;
-  height: 200px;
+  height: 23vh;
   padding: 2vw;
   display: flex;
   flex-direction: column;
@@ -74,7 +75,7 @@ section:first-of-type {
   clear: left;
   position: relative;
   top: 100px;
-  background-image: url(../assets/background.jpg);
+  background-image: url(../assets/rain.gif);
 }
 
 #projects section:nth-of-type(1) {
@@ -83,9 +84,9 @@ section:first-of-type {
 
 .welcome{
   text-align:center;
-  height: 40vw;
+  height: 75vh;
   background-size: 100% 100%;
-  background-image: url(../assets/welcomegif.gif);
+  background-image: url(../assets/record.gif);
   background-repeat: no-repeat;
   text-transform: uppercase;
   color: #fff;
@@ -98,6 +99,7 @@ section:first-of-type {
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
+  font-size: 5vmax;
 }
 
 .welcome-text{
@@ -105,8 +107,14 @@ section:first-of-type {
   display:inline-block; 
 }
 
+.welcome img{
+  margin-top: -4vw;
+  height: 50px;
+  height: 4vmax;
+}
+
 span{
-  line-height: 40vw;
+  line-height: 75vh;
 }
 
 #about h2{
@@ -138,29 +146,34 @@ span{
   filter: alpha(opacity=0); /* For IE8 and earlier */
 }
 
+#scroll{
+  font-weight: bold;
+}
+
 #about div{
   text-align: center;
+}
+
+#tech-container{
+  width: 90vw;
 }
 
 .col-xs-4{
   margin-top: 50px;
   margin-right: 0px;
   text-align: center;
+  height: 20vh;
 }
 
 .col-xs-4:hover{
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
   background-color: #191919 !important;
 }
 
-.tech{
-  width: 50%;
-  margin: 0 auto;
-  text-align: center; 
-  width: 150px; 
-  height: 150px; 
-}
-
-.tech p{
+.col-xs-4 p{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -170,6 +183,11 @@ span{
 
 #JotFormIFrame{
 	height: 750px !important;
+}
+
+.nav li{
+  width: 7.5vmax;
+  text-align: center;
 }
 
 .nav > li:hover {
