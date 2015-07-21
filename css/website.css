@@ -1,5 +1,5 @@
 body { 
-  background-color: rgba(238, 238, 238, 0.9); ;
+  background-color: rgb(238, 238, 238);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -98,6 +98,11 @@ section:first-of-type {
   font-weight: 500;
 }
 
+.welcome-text{
+  vertical-align: middle;
+  display:inline-block; 
+}
+
 span{
   line-height: 40vw;
 }
@@ -113,14 +118,8 @@ span{
   padding-top: 1vw;
 }
 
-.welcome-text{
-  vertical-align: middle;
-  display:inline-block; 
-}
-
 #about{
-	background: rgb(238, 238, 238); /* fallback color */
-	background: rgba(238, 238, 238, 0.8); 
+  min-height:90vw;
 }
 
 #footer{
@@ -137,8 +136,37 @@ span{
   filter: alpha(opacity=0); /* For IE8 and earlier */
 }
 
-#about{
-	height:2800px;
+#about div{
+  text-align: center;
+}
+
+.col-xs-4{
+  margin-top: 50px;
+  margin-right: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #EEEEEE;
+  text-align: center;
+}
+
+.col-xs-4:hover{
+  background-color: #191919 !important;
+}
+
+.tech{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center; 
+  width: 150px; 
+  height: 150px; 
+}
+
+.tech p{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 #JotFormIFrame{

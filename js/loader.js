@@ -35,6 +35,7 @@ $(document).ready(function(){
         $("#projects").stop(true, true);
         $("#contact").stop(true, true);
         $("#footer").stop(true, true);
+        $("#tech-container").stop(true, true);
         $("html, body").animate({ scrollTop: 0 }, "slow");
         $("#home-button").removeClass('active');
         $("#about-button").addClass('active')
@@ -45,6 +46,8 @@ $(document).ready(function(){
         $("#projects").fadeOut(150);
         $("#contact").fadeOut(150);
         $("#footer").fadeOut(150);
+        $("#scroll").show();
+        $("#tech-container").hide();
         setTimeout(function(){ $("#about").animate({'opacity': 'show', 'marginTop': -20}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
@@ -56,7 +59,7 @@ $(document).ready(function(){
         $("#me").css('margin-right', '6vw');
         $("#about section:nth-of-type(2)").stop(true, true);
         $("#about section:nth-of-type(2)").hide();
-        $("#about section:nth-of-type(2)").css("top", "150px")
+        $("#about section:nth-of-type(2)").css("top", "150px");
         setTimeout(function(){ 
             $("#index").css("margin-top", "25px");
             $("#about").css("margin-top", "25px");
@@ -130,9 +133,12 @@ $(document).ready(function(){
 });
 
 $(document).scroll(function() {
+    if($(document).scrollTop() > 100){
+        $("#scroll").fadeOut(500);
+    }
     if($(document).scrollTop() > 120){
-        console.log($(document).scrollTop());
         $("#about section:nth-of-type(2)").animate({'opacity': 'show', 'top': 50}, 1000);
+        $("#tech-container").fadeIn(1000);
     }
 });
 
