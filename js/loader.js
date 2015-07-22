@@ -133,10 +133,8 @@ $(document).ready(function(){
 });
 
 $(document).scroll(function() {
-    if($(document).scrollTop() > 100){
-        $("#scroll").fadeOut(500);
-    }
     if($(document).scrollTop() > 120){
+        $("#scroll").fadeOut(500);
         $("#about section:nth-of-type(2)").animate({'opacity': 'show', 'top': 50}, 1000);
         $("#tech-container").fadeIn(1000);
     }
