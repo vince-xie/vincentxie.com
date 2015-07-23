@@ -11,16 +11,13 @@
   <script type="text/javascript">
       //pre-load images
       var image1 = new Image();
-      image1.src = "assets/welcomegif.gif";
+      image1.src = "assets/about.jpg";
 
       var image2 = new Image();
-      image2.src = "assets/about.jpg";
+      image2.src = "assets/motherboard.jpg";
 
       var image3 = new Image();
-      image3.src = "assets/motherboard.jpg";
-
-      var image4 = new Image();
-      image4.src = "assets/record.gif";
+      image3.src = "assets/record.gif";
   </script>
 
   <body>
@@ -47,6 +44,11 @@
         </div>
       </nav>
     </div> <!-- /container -->
+
+    <video autoplay loop muted id="welcome-video" poster="assets/backupimage.gif" hidden>
+      <source src="assets/welcome.webm" type="video/webm">
+      <source src="assets/welcome.mp4" type="video/mp4">
+    </video>
 
     <div id="index" class="jumbotron" hidden>
       <div class="welcome">
@@ -109,6 +111,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
-    <div id="footer">&copy;2015 Vincent Xie. All rights reserved.<footer>
+    <div id="footer"> &copy;2015 Vincent Xie. All rights reserved.<footer>
   </body>
 </html>

@@ -1,7 +1,9 @@
 $(document).ready(function(){
     $("#nav").autoHidingNavbar();
-    $('#index').animate({'opacity': 'show', 'marginTop': -20}, 500);    
+    $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
+    $('#index').animate({'opacity': 'show', 'marginTop': 0}, 500);    
     $("#home-button").click(function(){
+        $("#welcome-video").stop(true, true);
         $("#index").stop(true, true);
         $("#about").stop(true, true);
         $("#projects").stop(true, true);
@@ -12,24 +14,29 @@ $(document).ready(function(){
         $("#about-button").removeClass('active')
         $("#projects-button").removeClass('active');
         $("#contact-button").removeClass('active');
+        $("#welcome-video").hide();
         $("#index").hide();
         $("#about").fadeOut(150);
         $("#projects").fadeOut(150);
         $("#contact").fadeOut(150);
-        $("#footer").fadeOut(150);
-        setTimeout(function(){ $("#index").animate({'opacity': 'show', 'marginTop': -20}, 500); 
-            $("#footer").fadeIn(500);
+        $("#footer").hide();
+        setTimeout(function(){ 
+            $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
+            $("#index").animate({'opacity': 'show', 'marginTop': 0}, 500); 
+            setTimeout(function(){ $("#footer").fadeIn(300); }, 500);
         }, 250);
         document.title = 'Vincent Xie - Developer';
         setTimeout(function(){ 
-            $("#index").css("margin-top", "25px");
-            $("#about").css("margin-top", "25px");
-            $("#projects").css("margin-top", "25px");
-            $("#contact").css("margin-top", "25px");  
+            $("#welcome-video").css("margin-top", "45px");
+            $("#index").css("margin-top", "45px");
+            $("#about").css("margin-top", "45px");
+            $("#projects").css("margin-top", "45px");
+            $("#contact").css("margin-top", "45px");  
         }, 160);
     });
 
     $("#about-button").click(function(){
+        $("#welcome-video").stop(true, true);
         $("#index").stop(true, true);
         $("#about").stop(true, true);
         $("#projects").stop(true, true);
@@ -41,14 +48,16 @@ $(document).ready(function(){
         $("#about-button").addClass('active')
         $("#projects-button").removeClass('active');
         $("#contact-button").removeClass('active');
+        $("#welcome-video").fadeOut(150);
         $("#index").fadeOut(150);
         $("#about").hide();
         $("#projects").fadeOut(150);
         $("#contact").fadeOut(150);
-        $("#footer").fadeOut(150);
+        $("#footer").hide();
         $("#scroll").show();
         $("#tech-container").hide();
-        setTimeout(function(){ $("#about").animate({'opacity': 'show', 'marginTop': -20}, 500); 
+        setTimeout(function(){ 
+            $("#about").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
         setTimeout(function(){ $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750); }, 400);
@@ -61,14 +70,16 @@ $(document).ready(function(){
         $("#about section:nth-of-type(2)").hide();
         $("#about section:nth-of-type(2)").css("top", "150px");
         setTimeout(function(){ 
-            $("#index").css("margin-top", "25px");
-            $("#about").css("margin-top", "25px");
-            $("#projects").css("margin-top", "25px");
-            $("#contact").css("margin-top", "25px");  
+            $("#welcome-video").css("margin-top", "45px");
+            $("#index").css("margin-top", "45px");
+            $("#about").css("margin-top", "45px");
+            $("#projects").css("margin-top", "45px");
+            $("#contact").css("margin-top", "45px");  
         }, 160);
     });
 
     $("#projects-button").click(function(){
+        $("#welcome-video").stop(true, true);
         $("#index").stop(true, true);
         $("#about").stop(true, true);
         $("#projects").stop(true, true);
@@ -79,24 +90,28 @@ $(document).ready(function(){
         $("#about-button").removeClass('active')
         $("#projects-button").addClass('active');
         $("#contact-button").removeClass('active');
+        $("#welcome-video").fadeOut(150);
         $("#index").fadeOut(150);
         $("#about").fadeOut(150);
         $("#projects").hide();
         $("#contact").fadeOut(150);
-        $("#footer").fadeOut(150);
-        setTimeout(function(){ $("#projects").animate({'opacity': 'show', 'marginTop': -20}, 500); 
+        $("#footer").hide();
+        setTimeout(function(){ 
+            $("#projects").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
         document.title = 'Projects';
         setTimeout(function(){ 
-            $("#index").css("margin-top", "25px");
-            $("#about").css("margin-top", "25px");
-            $("#projects").css("margin-top", "25px");
-            $("#contact").css("margin-top", "25px");  
+            $("#welcome-video").css("margin-top", "45px");
+            $("#index").css("margin-top", "45px");
+            $("#about").css("margin-top", "45px");
+            $("#projects").css("margin-top", "45px");
+            $("#contact").css("margin-top", "45px");  
         }, 160);
     });
 
     $("#contact-button").click(function(){
+        $("#welcome-video").stop(true, true);
         $("#index").stop(true, true);
         $("#about").stop(true, true);
         $("#projects").stop(true, true);
@@ -107,20 +122,23 @@ $(document).ready(function(){
         $("#about-button").removeClass('active')
         $("#projects-button").removeClass('active');
         $("#contact-button").addClass('active');
+        $("#welcome-video").fadeOut(150);
         $("#index").fadeOut(150);
         $("#about").fadeOut(150);
         $("#projects").fadeOut(150);
         $("#contact").hide();
-        $("#footer").fadeOut(150);
-        setTimeout(function(){ $("#contact").animate({'opacity': 'show', 'marginTop': -20}, 500); 
+        $("#footer").hide();
+        setTimeout(function(){ 
+            $("#contact").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
         document.title = 'Contact me';
         setTimeout(function(){ 
-            $("#index").css("margin-top", "25px");
-            $("#about").css("margin-top", "25px");
-            $("#projects").css("margin-top", "25px");
-            $("#contact").css("margin-top", "25px");  
+            $("#welcome-video").css("margin-top", "45px");
+            $("#index").css("margin-top", "45px");
+            $("#about").css("margin-top", "45px");
+            $("#projects").css("margin-top", "45px");
+            $("#contact").css("margin-top", "45px");  
         }, 160);
 
         if($.browser.mozilla){
