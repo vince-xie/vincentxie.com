@@ -20,19 +20,14 @@ $(document).ready(function(){
         $("#projects").fadeOut(150);
         $("#contact").fadeOut(150);
         $("#footer").hide();
+        $("#welcome-video").css("margin-top", "45px");
+        $("#index").css("margin-top", "45px");
         setTimeout(function(){ 
             $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             $("#index").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             setTimeout(function(){ $("#footer").fadeIn(300); }, 500);
         }, 250);
         document.title = 'Vincent Xie - Developer';
-        setTimeout(function(){ 
-            $("#welcome-video").css("margin-top", "45px");
-            $("#index").css("margin-top", "45px");
-            $("#about").css("margin-top", "45px");
-            $("#projects").css("margin-top", "45px");
-            $("#contact").css("margin-top", "45px");  
-        }, 160);
     });
 
     $("#about-button").click(function(){
@@ -56,6 +51,7 @@ $(document).ready(function(){
         $("#footer").hide();
         $("#scroll").show();
         $("#tech-container").hide();
+        $("#about").css("margin-top", "45px");
         setTimeout(function(){ 
             $("#about").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
@@ -69,13 +65,6 @@ $(document).ready(function(){
         $("#about section:nth-of-type(2)").stop(true, true);
         $("#about section:nth-of-type(2)").hide();
         $("#about section:nth-of-type(2)").css("top", "150px");
-        setTimeout(function(){ 
-            $("#welcome-video").css("margin-top", "45px");
-            $("#index").css("margin-top", "45px");
-            $("#about").css("margin-top", "45px");
-            $("#projects").css("margin-top", "45px");
-            $("#contact").css("margin-top", "45px");  
-        }, 160);
     });
 
     $("#projects-button").click(function(){
@@ -96,18 +85,12 @@ $(document).ready(function(){
         $("#projects").hide();
         $("#contact").fadeOut(150);
         $("#footer").hide();
+        $("#projects").css("margin-top", "45px");
         setTimeout(function(){ 
             $("#projects").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
         document.title = 'Projects';
-        setTimeout(function(){ 
-            $("#welcome-video").css("margin-top", "45px");
-            $("#index").css("margin-top", "45px");
-            $("#about").css("margin-top", "45px");
-            $("#projects").css("margin-top", "45px");
-            $("#contact").css("margin-top", "45px");  
-        }, 160);
     });
 
     $("#contact-button").click(function(){
@@ -128,19 +111,12 @@ $(document).ready(function(){
         $("#projects").fadeOut(150);
         $("#contact").hide();
         $("#footer").hide();
+        $("#contact").css("margin-top", "45px");  
         setTimeout(function(){ 
             $("#contact").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
         document.title = 'Contact me';
-        setTimeout(function(){ 
-            $("#welcome-video").css("margin-top", "45px");
-            $("#index").css("margin-top", "45px");
-            $("#about").css("margin-top", "45px");
-            $("#projects").css("margin-top", "45px");
-            $("#contact").css("margin-top", "45px");  
-        }, 160);
-
         if($.browser.mozilla){
             $(".mozilla-form").show();
         }
