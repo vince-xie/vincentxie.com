@@ -56,15 +56,15 @@ $(document).ready(function(){
             $("#about").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
-        setTimeout(function(){ $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750); }, 400);
-        document.title = 'About me';
         $('#me').stop(true, true);
         $("#me").css('opacity', '0');
         $("#me").css('margin-left', '-2vw');
         $("#me").css('margin-right', '6vw');
+        setTimeout(function(){ $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750); }, 400);
         $("#about section:nth-of-type(2)").stop(true, true);
         $("#about section:nth-of-type(2)").hide();
         $("#about section:nth-of-type(2)").css("top", "150px");
+        document.title = 'About me';
     });
 
     $("#projects-button").click(function(){
