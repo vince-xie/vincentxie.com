@@ -3,17 +3,10 @@ $(document).ready(function(){
     $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
     $('#index').animate({'opacity': 'show', 'marginTop': 0}, 500);    
     $("#home-button").click(function(){
-        $("#welcome-video").stop(true, true);
-        $("#index").stop(true, true);
-        $("#about").stop(true, true);
-        $("#projects").stop(true, true);
-        $("#contact").stop(true, true);
-        $("#footer").stop(true, true);
+        stopAnimations();
         $("html, body").animate({ scrollTop: 0 }, "slow");
+        removeAllActive();
         $("#home-button").addClass('active');
-        $("#about-button").removeClass('active')
-        $("#projects-button").removeClass('active');
-        $("#contact-button").removeClass('active');
         $("#welcome-video").hide();
         $("#index").hide();
         $("#about").fadeOut(150);
@@ -31,54 +24,24 @@ $(document).ready(function(){
     });
 
     $("#about-button").click(function(){
-        $("#welcome-video").stop(true, true);
-        $("#index").stop(true, true);
-        $("#about").stop(true, true);
-        $("#projects").stop(true, true);
-        $("#contact").stop(true, true);
-        $("#footer").stop(true, true);
+        stopAnimations();
         $("#tech-container").stop(true, true);
         $("html, body").animate({ scrollTop: 0 }, "slow");
-        $("#home-button").removeClass('active');
-        $("#about-button").addClass('active')
-        $("#projects-button").removeClass('active');
-        $("#contact-button").removeClass('active');
-        $("#welcome-video").fadeOut(150);
-        $("#index").fadeOut(150);
-        $("#about").hide();
-        $("#projects").fadeOut(150);
-        $("#contact").fadeOut(150);
-        $("#footer").hide();
-        $("#scroll").show();
-        $("#tech-container").hide();
-        $("#about").css("margin-top", "45px");
+        removeAllActive();
+        resetAbout();
         setTimeout(function(){ 
             $("#about").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
-        $('#me').stop(true, true);
-        $("#me").css('opacity', '0');
-        $("#me").css('margin-left', '-2vw');
-        $("#me").css('margin-right', '6vw');
         setTimeout(function(){ $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750); }, 400);
-        $("#about section:nth-of-type(2)").stop(true, true);
-        $("#about section:nth-of-type(2)").hide();
-        $("#about section:nth-of-type(2)").css("top", "150px");
         document.title = 'About me';
     });
 
     $("#projects-button").click(function(){
-        $("#welcome-video").stop(true, true);
-        $("#index").stop(true, true);
-        $("#about").stop(true, true);
-        $("#projects").stop(true, true);
-        $("#contact").stop(true, true);
-        $("#footer").stop(true, true);
+        stopAnimations();
         $("html, body").animate({ scrollTop: 0 }, "slow");
-        $("#home-button").removeClass('active');
-        $("#about-button").removeClass('active')
+        removeAllActive();
         $("#projects-button").addClass('active');
-        $("#contact-button").removeClass('active');
         $("#welcome-video").fadeOut(150);
         $("#index").fadeOut(150);
         $("#about").fadeOut(150);
@@ -94,16 +57,9 @@ $(document).ready(function(){
     });
 
     $("#contact-button").click(function(){
-        $("#welcome-video").stop(true, true);
-        $("#index").stop(true, true);
-        $("#about").stop(true, true);
-        $("#projects").stop(true, true);
-        $("#contact").stop(true, true);
-        $("#footer").stop(true, true);
+        stopAnimations();
         $("html, body").animate({ scrollTop: 0 }, "slow");
-        $("#home-button").removeClass('active');
-        $("#about-button").removeClass('active')
-        $("#projects-button").removeClass('active');
+        removeAllActive();
         $("#contact-button").addClass('active');
         $("#welcome-video").fadeOut(150);
         $("#index").fadeOut(150);
@@ -116,13 +72,8 @@ $(document).ready(function(){
             $("#contact").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             $("#footer").fadeIn(500);
         }, 250);
+        setContactForm();
         document.title = 'Contact me';
-        if($.browser.mozilla){
-            $(".mozilla-form").show();
-        }
-        else{
-            $(".form").show();
-        }
     });
 });
 
@@ -134,4 +85,47 @@ $(document).scroll(function() {
     }
 });
 
+function stopAnimations(){
+    $("#welcome-video").stop(true, true);
+    $("#index").stop(true, true);
+    $("#about").stop(true, true);
+    $('#me').stop(true, true);
+    $("#about section:nth-of-type(2)").stop(true, true);
+    $("#tech-container").stop(true, true);
+    $("#projects").stop(true, true);
+    $("#contact").stop(true, true);
+    $("#footer").stop(true, true);
+}
 
+function removeAllActive(){
+    $("#home-button").removeClass('active');
+    $("#about-button").removeClass('active')
+    $("#projects-button").removeClass('active');
+    $("#contact-button").removeClass('active');
+}
+
+function resetAbout(){
+    $("#about-button").addClass('active')
+    $("#welcome-video").fadeOut(150);
+    $("#index").fadeOut(150);
+    $("#about").hide();
+    $("#projects").fadeOut(150);
+    $("#contact").fadeOut(150);
+    $("#footer").hide();
+    $("#scroll").show();
+    $("#tech-container").hide();
+    $("#about").css("margin-top", "45px");
+    $("#me").css('opacity', '0');
+    $("#me").css('margin-left', '-2vw');
+    $("#me").css('margin-right', '6vw');    
+    $("#about section:nth-of-type(2)").hide();
+    $("#about section:nth-of-type(2)").css("top", "150px");
+}
+
+function setContactForm(){
+    if($.browser.mozilla){
+        $(".mozilla-form").show();
+    } else{
+        $(".form").show();
+    }    
+}
