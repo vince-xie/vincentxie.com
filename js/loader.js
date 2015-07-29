@@ -2,6 +2,7 @@ $(document).ready(function(){
     $("#nav").autoHidingNavbar();
     $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
     $('#index').animate({'opacity': 'show', 'marginTop': 0}, 500);    
+    setTimeout(function(){ $("#footer").fadeIn(300); }, 500);
     $("#home-button").click(function(){
         stopAnimations();
         $("html, body").animate({ scrollTop: 0 }, "slow");

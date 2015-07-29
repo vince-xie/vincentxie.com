@@ -3,6 +3,10 @@ html, body {
   height: 100%;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 body { 
   background-color: rgb(238, 238, 238);
   -webkit-background-size: cover;
