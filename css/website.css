@@ -211,13 +211,35 @@ span{
   font-weight: bold;
 }
 
-#projects button{
+#github-link{
   background-color: #2980b9;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-right: 5px;
+  color: #FFFFFF;
   border: none;
 }
 
-#projects button:hover{
-  background-color: #1D5A82;
+#github-link:hover{
+  background-color: #14405C;
+}
+
+#demo{
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  color: #FFFFFF;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  background-color: #687374;
+  border: none;
+}
+
+#demo:hover{
+  background-color: #2D3232;
 }
 
 #projects .col-xs-4 p{
