@@ -45,8 +45,8 @@ hr{
 
 section {
   box-sizing: border-box;
-  min-height: 200px;
-  height: 200px;
+  min-height: 175px;
+  height: 175px;
   height: 23vh;
   padding: 2vw;
   display: flex;
@@ -185,14 +185,14 @@ span{
   width: 90vw;
 }
 
-.col-xs-4{
+#about .col-xs-4{
   margin-top: 50px;
   margin-right: 0px;
   text-align: center;
   height: 20vh;
 }
 
-.col-xs-4:hover{
+#about .col-xs-4:hover{
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -200,7 +200,7 @@ span{
   background-color: #191919 !important;
 }
 
-.col-xs-4 p{
+#about .col-xs-4 p{
   position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -209,6 +209,19 @@ span{
   transform: translateY(-50%);
   color: #FFFFFF;
   font-weight: bold;
+}
+
+#projects button{
+  background-color: #2980b9;
+  border: none;
+}
+
+#projects button:hover{
+  background-color: #1D5A82;
+}
+
+#projects .col-xs-4 p{
+  height: 30px;
 }
 
 #JotFormIFrame{
