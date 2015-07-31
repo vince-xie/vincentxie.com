@@ -59,7 +59,10 @@ app.controller('projects-controller', ['$scope', function($scope) {
         desc: 'Simulates L1 cache behavior using a least recently used replacement algorithm. Can simulate both write-through and write-back. Written in C. ',
       }
     ];
-    $scope.hasDemo = function(project){
-      return project.hasOwnProperty('link')
+  $scope.hasDemo = function(project){
+    if (project.link == ''){
+      return false;
     }
+    return true;
+  }
 }]);
