@@ -91,7 +91,7 @@
             <h3> {{ project.name}} </h3>
             <p> {{ project.desc }} </p>
             <a ng-href="{{ project.github }}" target="_blank"><button id="github-link"><img src="assets/github_logo_white.png"></button></a>
-            <a ng-href="{{ project.link }}" target="_blank" ng-if="project.isLink"><button id="demo"> Demo </button></a>
+            <a ng-href="{{ project.link }}" target="_blank" ng-if="hasDemo(project)"><button id="demo"> Demo </button></a>
           </div>
         </div>
       </div>

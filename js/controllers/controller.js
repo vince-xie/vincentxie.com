@@ -46,20 +46,20 @@ app.controller('projects-controller', ['$scope', function($scope) {
         github: 'https://github.com/vinceix/vincentxie.com',
         desc: 'The source code for this website, vincentxie.com. This website is built using Bootstrap, AngularJS, and the animations are done using JQuery.',
         link: 'http://www.vincentxie.com/',
-        isLink: true
       },
       {
         name: 'Intro to CS Textbook',
         github: 'https://github.com/vinceix/Cache-Simulator',
         desc: 'An intro to computer science textbook that I contributed to writing. This textbook will supplement the intro courses offered at codehs.com.',
         link: 'http://codehs.gitbooks.io/introcs/content/',
-        isLink: true
       },
       {
         name: 'Cache simulator',
         github: 'https://github.com/vinceix/Cache-Simulator',
         desc: 'Simulates L1 cache behavior using a least recently used replacement algorithm. Can simulate both write-through and write-back. Written in C. ',
-        isLink: false
       }
     ];
+    $scope.hasDemo = function(project){
+      return project.hasOwnProperty('link')
+    }
 }]);
