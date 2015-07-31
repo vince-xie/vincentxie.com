@@ -8,6 +8,7 @@ $(document).ready(function(){
     $("#home-button").click(function(){
         stopAnimations();
         removeAllActive();
+        document.title = 'Vincent Xie - Developer'; 
         $("#home-button").addClass('active');
         $("#welcome-video").hide();
         $("#index").hide();
@@ -21,26 +22,26 @@ $(document).ready(function(){
             $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             $("#index").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             setTimeout(function(){ $("#footer").fadeIn(300); }, 500);
-            document.title = 'Vincent Xie - Developer'; 
         });
     });
 
     $("#about-button").click(function(){
         stopAnimations();
-        $("#tech-container").stop(true, true);
         removeAllActive();
+        document.title = 'About me'; 
+        $("#tech-container").stop(true, true);
         resetAbout();
         $("html, body").animate({ scrollTop: 0 }, 400, function(){
             $("#about").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
             setTimeout(function(){ $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750); }, 300);
-            document.title = 'About me'; 
         });
     });
 
     $("#projects-button").click(function(){
         stopAnimations();
         removeAllActive();
+        document.title = 'Projects'; 
         $("#projects-button").addClass('active');
         $("#welcome-video").fadeOut(150);
         $("#index").fadeOut(150);
@@ -52,13 +53,13 @@ $(document).ready(function(){
         $("html, body").animate({ scrollTop: 0 }, 400, function(){
             $("#projects").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
-            document.title = 'Projects'; 
         });
     });
 
     $("#contact-button").click(function(){
         stopAnimations();
         removeAllActive();
+        document.title = 'Contact me'; 
         $("#contact-button").addClass('active');
         $("#welcome-video").fadeOut(150);
         $("#index").fadeOut(150);
@@ -71,7 +72,6 @@ $(document).ready(function(){
             $("#contact").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             $("#footer").fadeIn(500);
             setContactForm();
-            document.title = 'Contact me'; 
         });
     });
 });
