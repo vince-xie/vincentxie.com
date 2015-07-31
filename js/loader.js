@@ -1,11 +1,12 @@
 $(document).ready(function(){
+
     $("#nav").autoHidingNavbar();
     $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
     $('#index').animate({'opacity': 'show', 'marginTop': 0}, 500);    
     setTimeout(function(){ $("#footer").fadeIn(300); }, 500);
+
     $("#home-button").click(function(){
         stopAnimations();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
         removeAllActive();
         $("#home-button").addClass('active');
         $("#welcome-video").hide();
@@ -16,31 +17,29 @@ $(document).ready(function(){
         $("#footer").hide();
         $("#welcome-video").css("margin-top", "45px");
         $("#index").css("margin-top", "45px");
-        setTimeout(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 400, function(){
             $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             $("#index").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             setTimeout(function(){ $("#footer").fadeIn(300); }, 500);
-        }, 250);
-        document.title = 'Vincent Xie - Developer';
+            document.title = 'Vincent Xie - Developer'; 
+        });
     });
 
     $("#about-button").click(function(){
         stopAnimations();
         $("#tech-container").stop(true, true);
-        $("html, body").animate({ scrollTop: 0 }, "slow");
         removeAllActive();
         resetAbout();
-        setTimeout(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 400, function(){
             $("#about").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
-        }, 250);
-        setTimeout(function(){ $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750); }, 400);
-        document.title = 'About me';
+            setTimeout(function(){ $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750); }, 300);
+            document.title = 'About me'; 
+        });
     });
 
     $("#projects-button").click(function(){
         stopAnimations();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
         removeAllActive();
         $("#projects-button").addClass('active');
         $("#welcome-video").fadeOut(150);
@@ -50,16 +49,15 @@ $(document).ready(function(){
         $("#contact").fadeOut(150);
         $("#footer").hide();
         $("#projects").css("margin-top", "45px");
-        setTimeout(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 400, function(){
             $("#projects").animate({'opacity': 'show', 'marginTop': -10}, 500); 
             $("#footer").fadeIn(500);
-        }, 250);
-        document.title = 'Projects';
+            document.title = 'Projects'; 
+        });
     });
 
     $("#contact-button").click(function(){
         stopAnimations();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
         removeAllActive();
         $("#contact-button").addClass('active');
         $("#welcome-video").fadeOut(150);
@@ -69,12 +67,12 @@ $(document).ready(function(){
         $("#contact").hide();
         $("#footer").hide();
         $("#contact").css("margin-top", "45px");  
-        setTimeout(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 400, function(){
             $("#contact").animate({'opacity': 'show', 'marginTop': 0}, 500); 
             $("#footer").fadeIn(500);
-        }, 250);
-        setContactForm();
-        document.title = 'Contact me';
+            setContactForm();
+            document.title = 'Contact me'; 
+        });
     });
 });
 
@@ -87,6 +85,7 @@ $(document).scroll(function() {
 });
 
 function stopAnimations(){
+    $("html, body").stop(true, true);
     $("#welcome-video").stop(true, true);
     $("#index").stop(true, true);
     $("#about").stop(true, true);
@@ -106,7 +105,7 @@ function removeAllActive(){
 }
 
 function resetAbout(){
-    $("#about-button").addClass('active')
+    $("#about-button").addClass('active');
     $("#welcome-video").fadeOut(150);
     $("#index").fadeOut(150);
     $("#about").hide();
