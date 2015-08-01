@@ -87,7 +87,7 @@ section:first-of-type {
 #about section:nth-of-type(2) {
   clear: left;
   position: relative;
-  background-image: url(../assets/record.gif);
+  background-image: url(../assets/background.jpg);
 }
 
 #projects section:nth-of-type(1) {
@@ -171,6 +171,7 @@ span{
   height: 30vmax;
   opacity: 0;
   filter: alpha(opacity=0); /* For IE8 and earlier */
+  border-radius: 100%;
 }
 
 #scroll{
