@@ -1,4 +1,13 @@
+app.controller('home-controller', ['$scope', function($scope){
+  $scope.$on("$routeChangeSuccess", function() {
+    setUpHome();
+  });
+}]);
+
 app.controller('about-controller', ['$scope', function($scope) { 
+  $scope.$on("$routeChangeSuccess", function() {
+    setUpAbout();
+  });
 	$scope.tech = [
   		{
   			name: 'HTML',
@@ -40,6 +49,9 @@ app.controller('about-controller', ['$scope', function($scope) {
 }]);
 
 app.controller('projects-controller', ['$scope', function($scope) { 
+  $scope.$on("$routeChangeSuccess", function() {
+    setUpProjects();
+  });
   $scope.projects = [
       {
         name: 'Personal Website',
@@ -66,4 +78,10 @@ app.controller('projects-controller', ['$scope', function($scope) {
     }
     return true;
   }
+}]);
+
+app.controller('contact-controller', ['$scope', function($scope){
+  $scope.$on("$routeChangeSuccess", function() {
+    setUpContact();
+  });
 }]);

@@ -105,7 +105,6 @@ section:first-of-type {
 }
 
 #welcome-video{
-  margin-top: 25px;
   position: absolute;
   left: 0;
   z-index: -1;

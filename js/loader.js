@@ -1,80 +1,36 @@
 $(document).ready(function(){
-
     $("#nav").autoHidingNavbar();
-    $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
-    $('#index').animate({'opacity': 'show', 'marginTop': 0}, 500);    
-    setTimeout(function(){ $("#footer").fadeIn(300); }, 500);
-
-    $("#home-button").click(function(){
-        stopAnimations();
-        removeAllActive();
-        document.title = 'Vincent Xie - Developer'; 
-        $("#home-button").addClass('active');
-        $("#welcome-video").hide();
-        $("#index").hide();
-        $("#about").fadeOut(150);
-        $("#projects").fadeOut(150);
-        $("#contact").fadeOut(150);
-        $("#footer").hide();
-        $("#welcome-video").css("margin-top", "45px");
-        $("#index").css("margin-top", "45px");
-        $("html, body").animate({ scrollTop: 0 }, 400, function(){
-            $("#welcome-video").animate({'opacity': 'show', 'marginTop': 0}, 500); 
-            $("#index").animate({'opacity': 'show', 'marginTop': 0}, 500); 
-            setTimeout(function(){ $("#footer").fadeIn(300); }, 500);
-        });
-    });
-
-    $("#about-button").click(function(){
-        stopAnimations();
-        removeAllActive();
-        document.title = 'About me'; 
-        $("#tech-container").stop(true, true);
-        resetAbout();
-        $("html, body").animate({ scrollTop: 0 }, 400, function(){
-            $("#about").animate({'opacity': 'show', 'marginTop': -10}, 500); 
-            $("#footer").fadeIn(500);
-            setTimeout(function(){ $("#me").animate({'opacity': '1', 'marginLeft': '2vw', 'marginRight': '2vw'}, 750); }, 300);
-        });
-    });
-
-    $("#projects-button").click(function(){
-        stopAnimations();
-        removeAllActive();
-        document.title = 'Projects'; 
-        $("#projects-button").addClass('active');
-        $("#welcome-video").fadeOut(150);
-        $("#index").fadeOut(150);
-        $("#about").fadeOut(150);
-        $("#projects").hide();
-        $("#contact").fadeOut(150);
-        $("#footer").hide();
-        $("#projects").css("margin-top", "45px");
-        $("html, body").animate({ scrollTop: 0 }, 400, function(){
-            $("#projects").animate({'opacity': 'show', 'marginTop': -10}, 500); 
-            $("#footer").fadeIn(500);
-        });
-    });
-
-    $("#contact-button").click(function(){
-        stopAnimations();
-        removeAllActive();
-        document.title = 'Contact me'; 
-        $("#contact-button").addClass('active');
-        $("#welcome-video").fadeOut(150);
-        $("#index").fadeOut(150);
-        $("#about").fadeOut(150);
-        $("#projects").fadeOut(150);
-        $("#contact").hide();
-        $("#footer").hide();
-        $("#contact").css("margin-top", "45px");  
-        $("html, body").animate({ scrollTop: 0 }, 400, function(){
-            $("#contact").animate({'opacity': 'show', 'marginTop': 0}, 500); 
-            $("#footer").fadeIn(500);
-            setContactForm();
-        });
-    });
 });
+
+function setUpHome(){
+    stopAnimations();
+    removeAllActive();
+    document.title = 'Vincent Xie - Developer'; 
+    $("#home-button").addClass('active');
+}
+
+function setUpAbout(){
+    stopAnimations();
+    removeAllActive();
+    document.title = 'About me'; 
+    $("#about-button").addClass('active');
+    resetAbout();
+}
+
+function setUpProjects(){
+    stopAnimations();
+    removeAllActive();
+    document.title = 'Projects'; 
+    $("#projects-button").addClass('active');
+}
+
+function setUpContact(){
+    stopAnimations();
+    removeAllActive();
+    document.title = 'Contact me'; 
+    $("#contact-button").addClass('active');
+    setContactForm();
+}
 
 $(document).scroll(function() {
     if($(document).scrollTop() > 120){
@@ -105,14 +61,6 @@ function removeAllActive(){
 }
 
 function resetAbout(){
-    $("#about-button").addClass('active');
-    $("#welcome-video").fadeOut(150);
-    $("#index").fadeOut(150);
-    $("#about").hide();
-    $("#projects").fadeOut(150);
-    $("#contact").fadeOut(150);
-    $("#footer").hide();
-    $("#scroll").show();
     $("#tech-container").hide();
     $("#about").css("margin-top", "45px");
     $("#me").css('opacity', '0');
