@@ -42,7 +42,7 @@ app.controller('about-controller', ['$scope', function($scope) {
   			color: '#95a5a6'
   		},
   		{
-  			name: 'Assembly',
+  			name: 'Ruby',
   			color: '#2980b9'
   		}
   	];
